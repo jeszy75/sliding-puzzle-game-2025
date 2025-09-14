@@ -49,4 +49,15 @@ public enum Direction {
         throw new IllegalArgumentException();
     }
 
+    /**
+     * {@return the opposite direction}
+     */
+    public Direction opposite() {
+        return switch (this) {
+            case DOWN -> UP;
+            case UP -> DOWN;
+            case LEFT -> RIGHT;
+            case RIGHT -> LEFT;
+        };
+    }
 }
